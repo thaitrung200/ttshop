@@ -47,7 +47,9 @@ img {
 .text-red{
     color: red;
 }
-
+.mt-80{
+    margin-top: 80px;
+}
 .header{
     height: 80px;
     position: fixed;
@@ -258,7 +260,7 @@ label {
 
 .review{
     height: 520px;
-    background: url(../public/image/review-img.jpg) center center no-repeat;
+    background: url(../image/review-img.jpg) center center no-repeat;
 }
 .review-item{
     background-color: #7ba7fd;

@@ -10,9 +10,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="main">
+        <div class="header ">
+            <div class="container ">
+                <div class="header-container d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="./src/image/logo1.jpg" alt="" class="logo-img" />
+                    </div>
+                    <ul class="menu d-flex align-items-center">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="product.html">Sản phẩm</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                    <div class="menu-user">
+                        <i class="bi bi-search menu-icon"></i>
+                        <a href="#my-dialog" class="dialog-btn">
+                            <i class="bi bi-person menu-icon "></i>
+                        </a>
     
+                        <div class="dialog overlay" id="my-dialog">
+                            <div class="form position-relative ">
+                                <div class="tab-content">
+                                <a href="#" class="close position-absolute">
+                                    <i class="bi bi-x"></i>
+                                </a>
+                                    <div id="signup">   
+                            
+                                        <h1 class="text-center form-heading">Đăng kí tài khoản</h1>
+                                        
+                                        <form action="/" method="post">
+                                            <input class="form-input" type="text" placeholder="Tên tài khoản" >
+                                            <input class="form-input" type="text" placeholder="Số điện thoại" name="phone" value="">
+                                            <input class="form-input" type="password" placeholder="Mật khẩu" name="pass" value="">
+                                            <input class="form-input" type="password" placeholder="Nhập lại mật khẩu" name="pass" value="">
+                                       
+                                        
+                                            <button type="submit" class="btn btn-primary text-center mt-3 btn-singup">Đăng kí</button>
+                                            <div class="login d-flex justify-content-between align-items-center mt-4">
+                                                <p class="fw-bold">Bạn đã có tài khoản?</p>
+                                                <button class="btn btn-primary">Đăng nhập</button>
+                                            </div>
+                                        
+                                        </form>
+                            
+                                    </div>
+                                    <!--
+                                    <div id="login">   
+                                        <h1>Welcome Back!</h1>
+                                        
+                                        <form action="/" method="post">
+                                        
+                                        <div class="field-wrap">
+                                        <label>
+                                            Email Address<span class="req">*</span>
+                                        </label>
+                                        <input type="email"required autocomplete="off"/>
+                                        </div>
+                                        
+                                        <div class="field-wrap">
+                                        <label>
+                                            Password<span class="req">*</span>
+                                        </label>
+                                        <input type="password"required autocomplete="off"/>
+                                        </div>
+                                        
+                                        <p class="forgot"><a href="#">Forgot Password?</a></p>
+                                        
+                                        <button class="button button-block"/>Log In</button>
+                                        
+                                        </form>
+                            
+                                    </div> -->
+                                    
+                                </div><!-- tab-content -->
+                                    
+                            </div> <!-- /form -->
+                        </div>
+                        <i class="bi bi-bag menu-icon"></i>
+                        
+                        
+                    </div>
+                    <!-- Modal -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="mt-80">Sản phẩm</div>
+    </div>
 
 
-    <script type="module" src=""></script>
+    <script type="module" src="./src/js/product.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "../css/style.css"
 
+
 $('.multiple-items').slick({
     dots: true,
     infinite: true,

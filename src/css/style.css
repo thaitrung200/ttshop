@@ -223,6 +223,9 @@ label {
 
 .home-product-item{
     cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgb(34 34 34 / 10%);
 }
 .thumbnails{
     position: relative;
@@ -231,7 +234,8 @@ label {
 }
 
 .thumbnails img{
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    width: 100%;
 }
 .product-img{
     
@@ -246,6 +250,9 @@ label {
 .thumbnails:hover .product-img-hover{
     display: block;
 }
+.product-content{
+    padding: 12px 0;
+}
 .product-content-title{
     font-size: 14px;
 }
@@ -256,6 +263,12 @@ label {
     color: #d50000;
     font-weight: bold;
     font-size: 16px;
+}
+.product-new-container img{
+    max-width: 100%;
+}
+.thumbnails-new{
+    cursor: pointer;
 }
 
 .review{

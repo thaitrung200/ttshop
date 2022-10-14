@@ -251,7 +251,7 @@ label {
     display: block;
 }
 .product-content{
-    padding: 12px 0;
+    padding: 8px 0 12px 0;
 }
 .product-content-title{
     font-size: 14px;
@@ -391,7 +391,102 @@ label {
     text-transform: uppercase;
 }
 
-/* Banner */
-.banner{
-    margin-top: 80px;
+/* breadcrumbs */
+.breadcrumbs{
+    padding: 80px 0;
+    background: url(../image/bg-blog.jpg) center center no-repeat;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.breadcrumbs::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.45;
+    z-index: -1;
+}
+.breadcrumb-title{
+    color: #fff;
+    text-align: center;
+}
+.breadcrumb-title h2{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.form-select{
+    width: auto;
+}
+.product-header h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+.product-filter p{
+    font-weight: 700;
+    margin-right: 12px;
+}
+.product-item{
+    margin-bottom: 24px;
+}
+
+.product-detail-img img{
+    width: 100%;
+}
+.product-detail h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+.form-size label{
+    width: 50px;
+}
+.warp-price{
+    font-size: 24px;
+    font-weight: bold;
+}
+.quantity{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: inline-flex;
+    position: relative;
+    transition: opacity .3s ease;
+    width: 110px;
+    margin-right: 24px;
+}
+.qty{
+    background-color: transparent;
+    border: 0;
+    flex-grow: 1;
+    height: 30px;
+    max-width: 40px;
+    text-align: center;
+}
+.btn-add{
+    padding: 10px 20px ;
+    background-color: #cc1e1e;
+    /* border: 1px solid #ccc; */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+.product-warp-header p{
+    font-weight: 500;
+}
+
+.des-heading{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    /* border-bottom: 2px solid #cc1e1e; */
+}
+.product-des-wrap p{
+    font-size: 16px;
+    color: #111111;
 }

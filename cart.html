@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="header ">
+            <div class="container ">
+                <div class="header-container d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="./src/image/logo1.jpg" alt="" class="logo-img" />
+                    </div>
+                    <ul class="menu d-flex align-items-center">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="product.html">Sản phẩm</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                    <div class="menu-user">
+                        <i class="bi bi-search menu-icon"></i>
+                        <a href="#my-dialog" class="dialog-btn">
+                            <i class="bi bi-person menu-icon "></i>
+                        </a>
+    
+                        <div class="dialog overlay" id="my-dialog">
+                            <div class="form position-relative ">
+                                <div class="tab-content">
+                                <a href="#" class="close position-absolute">
+                                    <i class="bi bi-x"></i>
+                                </a>
+                                    <div id="signup">   
+                            
+                                        <h1 class="text-center form-heading">Đăng kí tài khoản</h1>
+                                        
+                                        <form action="/" method="post">
+                                            <input class="form-input" type="text" placeholder="Tên tài khoản" >
+                                            <input class="form-input" type="text" placeholder="Số điện thoại" name="phone" value="">
+                                            <input class="form-input" type="password" placeholder="Mật khẩu" name="pass" value="">
+                                            <input class="form-input" type="password" placeholder="Nhập lại mật khẩu" name="pass" value="">
+                                       
+                                        
+                                            <button type="submit" class="btn btn-primary text-center mt-3 btn-singup">Đăng kí</button>
+                                            <div class="login d-flex justify-content-between align-items-center mt-4">
+                                                <p class="fw-bold">Bạn đã có tài khoản?</p>
+                                                <button class="btn btn-primary">Đăng nhập</button>
+                                            </div>
+                                        
+                                        </form>
+                            
+                                    </div>
+                                    <!--
+                                    <div id="login">   
+                                        <h1>Welcome Back!</h1>
+                                        
+                                        <form action="/" method="post">
+                                        
+                                        <div class="field-wrap">
+                                        <label>
+                                            Email Address<span class="req">*</span>
+                                        </label>
+                                        <input type="email"required autocomplete="off"/>
+                                        </div>
+                                        
+                                        <div class="field-wrap">
+                                        <label>
+                                            Password<span class="req">*</span>
+                                        </label>
+                                        <input type="password"required autocomplete="off"/>
+                                        </div>
+                                        
+                                        <p class="forgot"><a href="#">Forgot Password?</a></p>
+                                        
+                                        <button class="button button-block"/>Log In</button>
+                                        
+                                        </form>
+                            
+                                    </div> -->
+                                    
+                                </div><!-- tab-content -->
+                                    
+                            </div> <!-- /form -->
+                        </div>
+                        <a href="cart.html">
+                            <i class="bi bi-bag menu-icon"></i>
+                        </a>
+                        
+                        
+                    </div>
+                    <!-- Modal -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumbs mt-80">
+            <div class="breadcrumb-title">
+                <h2>Giỏ hàng</h2>
+                <div>Trang chủ / Giỏ hàng của bạn</div>
+            </div>
+        </div>
+        <div class="carts">
+            <div class="container">
+                <!-- <h1 class="heading">
+                    <ion-icon name="cart-outline"></ion-icon> Giỏ hàng
+                </h1>               -->
+                <div class="d-flex">            
+                    <!--
+                     - checkout section
+                    -->
+                    <section class="checkout">
+              
+                      <h2 class="section-heading">Chi tiết thanh toán</h2>
+              
+                      <div class="payment-form">
+              
+                        <form action="#">
+              
+                          <div class="cardholder-name">
+                            <label for="cardholder-name" class="label-default">Họ và tên</label>
+                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                          </div>
+              
+                          <div class="card-number">
+                            <label for="card-number" class="label-default">Số điện thoại</label>
+                            <input type="number" name="card-number" id="card-number" class="input-default">
+                          </div>
+                          <div class="card-email mb-3">
+                            <label for="card-email" class="label-default">Email</label>
+                            <input type="email" name="card-number" id="card-number" class="input-default">
+                          </div>
+              
+                          <div class="d-flex">
+              
+                            <div class="expire-date">
+                              <label for="expire-date" class="label-default">Ngày</label>
+              
+                              <div class="input-flex">
+              
+                                <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31"
+                                  class="input-default">
+                                /
+                                <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12"
+                                  class="input-default">
+                                  /
+                                <input type="number" name="year" id="expire-date" placeholder="" min="" max=""
+                                  class="input-default">
+                              </div>
+                            </div>
+              
+              
+                          </div>
+              
+                        </form>
+              
+                      </div>
+              
+                      <button class="btn btn-primary">
+                        <span id="payAmount">Thanh toán</span>
+                      </button>
+              
+                    </section>         
+                    <!--
+                      - cart section
+                    -->
+                    <section class="cart">
+              
+                      <div class="cart-item-box">
+              
+                        <h2 class="section-heading">Sản phẩm</h2>
+              
+                        <div class="product-card">
+              
+                          <div class="card">
+              
+                            <div class="img-box">
+                              <img src="./src/image/green-tomatoes.jpg" alt="Green tomatoes" width="80px" class="product-img">
+                            </div>
+              
+                            <div class="detail">
+              
+                              <h4 class="product-name">Green Tomatoes 1 Kilo</h4>
+              
+                              <div class="wrapper">
+              
+                                <div class="product-qty">
+                                    <button id="decrement">
+                                        <i class="bi bi-dash minus"></i>
+                                      </button>
+                  
+                                      <span id="quantity">1</span>
+                  
+                                      <button id="increment">
+                                        <i class="bi bi-plus plus"></i>
+                                      </button>
+                                </div>
+              
+                                <div class="price">
+                                  $ <span id="price">1.25</span>
+                                </div>
+              
+                              </div>
+              
+                            </div>
+              
+                            <button class="product-close-btn">
+                                <i class="bi bi-x"></i>
+                            </button>
+              
+                          </div>
+              
+                        </div>
+              
+                        <div class="product-card">
+              
+                          <div class="card">
+              
+                            <div class="img-box">
+                              <img src="./src/image/green-tomatoes.jpg" alt="Cabbage" width="80px" class="product-img">
+                            </div>
+              
+                            <div class="detail">
+              
+                              <h4 class="product-name">Cabbage 1 Pcs</h4>
+              
+                              <div class="wrapper">
+              
+                                <div class="product-qty">
+                                  <button id="decrement">
+                                    <i class="bi bi-dash minus"></i>
+                                  </button>
+              
+                                  <span id="quantity">1</span>
+              
+                                  <button id="increment">
+                                    <i class="bi bi-plus plus"></i>
+                                  </button>
+                                </div>
+              
+                                <div class="price">
+                                  $ <span id="price">0.80</span>
+                                </div>
+              
+                              </div>
+              
+                            </div>
+              
+                            <button class="product-close-btn">
+                                <i class="bi bi-x"></i>
+                            </button>
+              
+                          </div>
+              
+                        </div>
+              
+                      </div>
+              
+                      <div class="wrapper">
+              
+                        <div class="discount-token">
+              
+                          <label for="discount-token" class="label-default">Voucher giảm giá</label>
+              
+                          <div class="wrapper-flex">
+              
+                            <input type="text" name="discount-token" id="discount-token" class="input-default">
+              
+                            <button class="btn btn-outline">Apply</button>
+              
+                          </div>
+              
+                        </div>
+              
+                        <div class="amount">
+              
+                          <div class="subtotal">
+                            <span>Tổng tiền hàng</span> <span>$ <span id="subtotal">2.05</span></span>
+                          </div>
+              
+                          <div class="tax">
+                            <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
+                          </div>
+              
+                          <div class="shipping">
+                            <span>Shipping</span> <span>$ <span id="shipping">0.00</span></span>
+                          </div>
+              
+                          <div class="total">
+                            <span>Tổng thanh toán</span> <span>$ <span id="total">2.15</span></span>
+                          </div>
+              
+                        </div>
+              
+                      </div>
+              
+                    </section>             
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/js/cart.js"></script>
+</body>
+</html>

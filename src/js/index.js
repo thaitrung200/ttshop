@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.min.js";
 import "slick-carousel/slick/slick-theme.css";
 
 import "../css/style.css"
+import "../css/reponsive.css"
 
 
 $('.multiple-items').slick({

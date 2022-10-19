@@ -1,36 +1,128 @@
 /* Mobile & Tablet */
 @media( min-width:1024px){
-    .menu-mobile{
-        display: none;
+    .header-mobile{
+        display: none !important;
     }
 }
 /* Mobile & Tablet */
 @media( max-width:1023px){
-   
+    .header-mobile{
+        /* display: none !important; */
+    }
 }
 /* Tablet */
 @media(min-width:740px) and (max-width:1023px){
-    .menu-mobile{
-        display: none;
-    }
+   .header-mobile{
+    display: none;
+   }
 }
 /* Mobile */
 @media(max-width:739px){
-    .menu{
-        flex-direction: column;
-        display: none !important;
+    .d-none-mb{
+        display: none;
     }
-    .menu-mobile i{
-        font-size: 2.5rem;
-    }
-    .header{
-        height: 60px;
+    .app{
         overflow: hidden;
     }
-    .header-container {
+    .title h2{
+        font-size: 18px;
+        margin-bottom: 12px !important;
+    }
+    .header{
+        display: none !important;
+    }
+    .header-mobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        padding: 18x 8px;
+        background-color: #fff;
+        display: block;
+    }
+    .header-mb-container{
         height: 60px;
     }
-    .menu-user{
+    .nav-mb{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 40%;
+        padding-top: 26px;
+        height: 100%;
+        z-index: 99;
         display: none;
+    }
+    .nav-mb.open{
+        display: block;
+    }
+    .nav-mb a{
+        font-size: 1.2rem;
+        color: #222222;
+        padding: 4px 20px;
+        font-weight: 500;
+    }
+    .nav-mb i{
+        font-size: 2rem;
+    }
+    .over{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        z-index: 99;
+    }
+    .over.open{
+        display: block;
+    }
+    .mb-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 4px;
+        font-size: 20px;
+    }
+    .menu-mb i{
+        font-size: 2.5rem;
+    }
+    
+    .header-mobile{
+        border-bottom: 1px solid #ccc;
+    }
+    .logo-mb img{
+        height: 40px;
+    }
+
+    .home-slider{
+        margin-top: 60px;
+    }
+    .swiper{
+        margin-top: 12px !important;
+    }
+    .swiper-container{
+        padding: 0;
+    }
+    .swiper-item{
+        padding: 8px 0;
+    }
+    .contact{
+        margin-top: 12px;
+    }
+    .contact-header{
+        margin-bottom: 0;
+    }
+    .contact-socials li{
+        margin-bottom: 0;
+    }
+    .home-product-item{
+        margin-top: 24px;
+    }
+    .post-card{
+        margin-top: 12px;
     }
 }

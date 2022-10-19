@@ -724,3 +724,7 @@ label {
     .expire-date .input-flex { flex-direction: row; }
   
   }
+.home-slider img{
+    width: 100%;
+    height: 100%;
+}

@@ -21,6 +21,10 @@
     .d-none-mb{
         display: none;
     }
+    .f-direction-mb{
+        display: flex;
+        flex-direction: column;
+    }
     .app{
         overflow: hidden;
     }
@@ -124,5 +128,30 @@
     }
     .post-card{
         margin-top: 12px;
+    }
+    .user-mb i{
+        font-size: 1.6rem;
+    }
+    .breadcrumbs{
+        margin-top: 60px;
+    }
+    .footer{
+        padding: 24px 12px;
+    }
+    .product-detail-warp{
+        margin: 24px 0;
+        padding: 0;
+    }
+    .checkout{
+        width: auto;
+    }
+    .cart{
+        width: auto;
+    }
+    .cardholder-name, .card-number {
+        margin-bottom: 10px;
+    }
+    .payment-form input {
+        padding: 8px 12px;
     }
 }

@@ -58,13 +58,8 @@ $('.multiple-items').slick({
   overflow.classList.add('open')
  }
  menuClose.onclick = function(){
-  headerNav.classList.remove('open');
+    headerNav.classList.remove('open');
      overflow.classList.remove('open');
  }
  
-
- // function hidemenu(){
- //     headerNav.classList.remove('open');
- //     overflow.classList.remove('open');
- // }
- // menuClose.addEventListener('click',hidemenu)       
+ 

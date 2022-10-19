@@ -8,12 +8,13 @@
     box-sizing: border-box;
 }
 
-body {
+html,body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     position: relative;
     background-color: var(--main-bg-color);
     overflow-x: hidden;
+    width: 100%;
 }
 ul{
     margin: 0;
@@ -270,7 +271,9 @@ label {
 .thumbnails-new{
     cursor: pointer;
 }
-
+.product-detail-warp  {
+    padding-left: 40px;
+}
 .review{
     height: 520px;
     background: url(../image/review-img.jpg) center center no-repeat;

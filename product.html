@@ -19,10 +19,10 @@
                     </div>
                     <ul class="menu d-flex align-items-center">
                         <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
                         <li><a href="product.html">Sản phẩm</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="blog.html">Tin tức</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                     </ul>
                     <div class="menu-user">
                         <i class="bi bi-search menu-icon"></i>
@@ -88,10 +88,14 @@
                                     
                             </div> <!-- /form -->
                         </div>
-                        <i class="bi bi-bag menu-icon"></i>
+                        <a href="cart.html" class="cart-menu">
+                            <i class="bi bi-bag menu-icon"></i>
+                            <span>0</span>
+                        </a>
                         
                         
                     </div>
+    
                     <!-- Modal -->
                     
                 </div>
@@ -105,11 +109,11 @@
     
                     </div>
                     <div class="nav-mb">
-                        <li><a href="">Trang chủ</a></li>
-                        <li><a href="">Giới thiệu</a></li>
-                        <li><a href="">Sản phẩm</a></li>
-                        <li><a href="">Tin tức</a></li>
-                        <li><a href="">Liên hệ</a></li>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="product.html">Sản phẩm</a></li>
+                        <li><a href="blog.html">Tin tức</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                         <p class="mb-close"><i class="bi bi-x"></i></p>
                     </div>
                     <div class="logo-mb">
@@ -132,8 +136,8 @@
         <div class="products pt-4 pb-4">
             <div class="container">
                 <div class="row">
-                    <div class="product-header d-flex justify-content-between">
-                        <h2 class="d-none-mb">Danh mục sản phẩm</h2>
+                    <div class="product-header d-flex justify-content-end">
+                        <h2 class="d-none-mb d-none">Danh mục sản phẩm</h2>
                         <div class="product-filter d-flex align-items-center">
                             <p>Sắp xếp theo:</p>
                             <select class="form-select" aria-label="Default select example">
@@ -145,175 +149,194 @@
                         </div>
                     </div>
                 </div>
-                <div class="row product mt-md-4">
-                    <div class="col-md-3 col-6">
-                        <a href="product-detail.html" class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                <div class="row mt-md-4 ">
+                    <div class="col-md-3 d-none-mb">
+                        <h2 class="filter-title">Danh mục sản phẩm</h2>
+                        <div class="filter-checkbox " >
+                            <label for="" class="d-flex align-items-center">
+                                <input type="checkbox"> <span>Giày nam</span>
+                            </label>
+                            <label for="" class="d-flex align-items-center">
+                                <input type="checkbox"> <span>Giày nữ</span>
+                            </label>
+                            <label for="" class="d-flex align-items-center">
+                                <input type="checkbox"> <span>Giày nữ Adidas</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-12">
+                        <div class="row product">
+                            <div class="col-md-3 col-6">
+                                <a href="product-detail.html" class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="home-product-item product-item">
+                                    <div class="thumbnails">
+                                        <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                        <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
+                                    </div>
+                                    <div class="product-content ">
+                                        <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                                        <div class="product-content-footer d-flex justify-content-around align-items-center">
+                                            <div class="price">1.350.000đ</div>
+                                            <div class="rating">
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                                <img src="./src/image/star.png" alt="" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
-                            </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
-                            </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
-                            </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
-                            </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
-                            </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="home-product-item product-item">
-                            <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
-                                <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
-                            </div>
-                            <div class="product-content ">
-                                <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
-                                <div class="product-content-footer d-flex justify-content-around align-items-center">
-                                    <div class="price">1.350.000đ</div>
-                                    <div class="rating">
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                        <img src="./src/image/star.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <nav aria-label="Page navigation example ">
                     <ul class="pagination d-flex justify-content-center mt-3">

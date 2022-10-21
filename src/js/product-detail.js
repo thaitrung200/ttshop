@@ -22,3 +22,6 @@ let menuMobile=document.querySelector('.menu-mb .menu-mb-icon');
     headerNav.classList.remove('open');
      overflow.classList.remove('open');
  }
+
+const url = new URL(location.href);
+const id = Number(url.searchParams.get("id"));

@@ -131,6 +131,21 @@ img {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.cart-menu{
+    position: relative;
+}
+.cart-menu span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+}
 
 /* Form */
 .form {
@@ -227,6 +242,19 @@ label {
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgb(34 34 34 / 10%);
+    margin-top: 16px;
+    position: relative;
+}
+.add-cart{
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    z-index: 9;
+    padding: 8px;
+    cursor: pointer;
+}
+.add-cart i{
+    font-size: 24px;
 }
 .thumbnails{
     position: relative;
@@ -256,6 +284,24 @@ label {
 }
 .product-content-title{
     font-size: 14px;
+}
+.filter-title{
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    margin-right: 38px;
+    /* margin: 0 12px 12px 0; */
+    border-bottom: 1px solid #ccc;
+}
+.filter-checkbox label{
+    width: 100%;
+    padding-top: 12px;
+}
+.filter-checkbox input{
+    font-size: 16px;
+}
+.filter-checkbox span{
+    margin-left: 16px;
 }
 .product-content-footer{
     
@@ -306,6 +352,10 @@ label {
     overflow: hidden;
     box-shadow: 0 5px 20px rgb(34 34 34 / 10%);
 }
+.post-card img{
+    width: 100%;
+    height: 200px;
+}
 .post-card-body{
     padding: 15px;
 }
@@ -354,17 +404,19 @@ label {
 .footer-menu li a{
     font-size: 14px;
 }
-
-.contact-header{
+.footer .contact{
+    padding: 0;
+}
+.footer .contact-header{
     text-align: center;
     font-weight: 600;
     margin-bottom: 20px;
     font-size: 38px;
 }
-.contact-socials li{
+.footer.contact-socials li{
     margin-bottom: 10px;
 }
-.contact-socials a{
+.footer .contact-socials a{
     font-size: 30px;
     margin: 0 10px;
 }
@@ -730,4 +782,108 @@ label {
 .home-slider img{
     width: 100%;
     height: 100%;
+}
+
+
+/* About */
+.about{
+    padding: 24px 0;
+}
+.about-content p{
+    font-size: 16px;
+    color: #5a5a5a;
+}
+.about-content .about-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+}
+.about-contact{
+    margin-top: 12px;
+}
+.customer{
+    margin-top: 12px;
+}
+.customer h5{
+    /* margin-bottom: 12px; */
+}
+.customer img{
+    width: 100%;
+    margin-top: 12px;
+}
+.about-side img{
+    width: 100%;
+}
+
+/* Contact */
+.contact{
+    padding: 24px 0;
+}
+.contact .info{
+    margin-top: 12px;
+}
+.contact .info i{
+    margin-right: 4px;
+}
+.form-info{
+    margin-top: 12px;
+}
+.form-info input, textarea{
+    width: 70%;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+}
+.form-info input{
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+}
+.form-info .form-group{
+    margin-bottom: 12px;
+}
+.blog{
+    padding: 24px 0;
+}
+.blog-card{
+    margin-bottom: 16px;
+}
+.blog-card p{
+    font-size: 14px;
+    color: #000;
+}
+.blog-card h2{
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.blog-card h5{
+    margin-bottom: 6px;
+}
+.blog-card ul li{
+    font-size: 14px;
+}
+.fakeimg img{
+    width: 100%;
+    margin-bottom: 12px;
+}
+.blog-right input{
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+.blog-category a{
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+.blog-category-img{
+    margin-top: 12px;
+}
+
+/* Footer */
+.footer{}
+.footer-top h3{
+    font-size: 20px;
 }

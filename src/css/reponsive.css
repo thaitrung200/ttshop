@@ -15,6 +15,14 @@
    .header-mobile{
     display: none;
    }
+   .menu a {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0px 6px;
+    }
+    .form-info input,textarea{
+        width: 100%;
+    }
 }
 /* Mobile */
 @media(max-width:739px){
@@ -153,5 +161,28 @@
     }
     .payment-form input {
         padding: 8px 12px;
+    }
+
+    /* Contact */
+    .contact{}
+    .contact h3{
+        margin-top: 12px;
+    }
+    .form-info input,textarea{
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer .contact-header {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .footer-top h3 {
+        font-size: 18px;
+    }
+    .footer-menu li a {
+        font-size: 12px;
     }
 }

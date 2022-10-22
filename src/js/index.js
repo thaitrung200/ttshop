@@ -116,7 +116,7 @@ const addToCart = (event) => {
 
 // render product
 $(function () {
-  const productTemplate = $("#home-product").html();
+  const productTemplate = $("#product").html();
   const product = _.template(productTemplate); // compile
 
   $(".list-product").append(
@@ -124,6 +124,15 @@ $(function () {
       const dom = $(product(pr));
 
       dom.find(".add-cart").on("click", pr, addToCart);
+
+      return dom;
+    })
+  );
+  $(".product").append(
+    _.map(products, (pr) => {
+      const dom = $(product(pr));
+
+      // dom.find(".add-cart").on("click", pr, addToCart);
 
       return dom;
     })

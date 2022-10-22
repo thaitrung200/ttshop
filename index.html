@@ -206,10 +206,10 @@
             <div class="home-product-container">
                 <div class="title mb-md-5 text-uppercase font-weight-bold text-center"><h2>Sản phẩm nổi bật</h2></div>
                 <div class="row list-product">
-                    <div class="col-md-3 col-6">
+                    <!-- <div class="col-md-3 col-6">
                         <a href="product-detail.html" class="home-product-item">
                             <div class="thumbnails">
-                                <img src="./src/image/product-1.jpg" alt="" class="product-img">
+                                <img src="${img}" alt="" class="product-img">
                                 <img src="./src/image/product-1-1.jpg" alt="" class="product-img-hover">
                             </div>
                             <div class="product-content ">
@@ -225,6 +225,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="add-cart"><i class="bi bi-cart-plus"></i></div>
                         </a>
                     </div>
                     <div class="col-md-3 col-6">
@@ -373,7 +374,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -648,6 +649,30 @@
         </div>
         </div>
     </div>
+    <script type="text/html" id="home-product">
+        <div class="col-md-3 col-6">
+            <a href="product-detail.html" class="home-product-item">
+                <div class="thumbnails">
+                    <img src="${img}" alt="" class="product-img">
+                    <img src="${img_hover}" alt="" class="product-img-hover">
+                </div>
+                <div class="product-content ">
+                    <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">${name}</h3>
+                    <div class="product-content-footer d-flex justify-content-around align-items-center">
+                        <div class="price">${price}</div>
+                        <div class="rating">
+                            <img src="./src/image/star.png" alt="" />
+                            <img src="./src/image/star.png" alt="" />
+                            <img src="./src/image/star.png" alt="" />
+                            <img src="./src/image/star.png" alt="" />
+                            <img src="./src/image/star.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="add-cart"><i class="bi bi-cart-plus"></i></div>
+            </a>
+        </div>
+    </script>
     <script type="module" src="./src/js/index.js">
         
     </script>

@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/dropdown';
 import $ from "jquery"
+import _ from "lodash";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick.min.js";
 import "slick-carousel/slick/slick-theme.css";
@@ -64,36 +65,67 @@ $('.multiple-items').slick({
      overflow.classList.remove('open');
  }
  
- $(".list-product").html( products.map(
-    (p) => `
-      <div class="col-md-3 col-6 position-relative">
-        <a href="product-detail.html" class="home-product-item">
-          <div class="thumbnails">
-              <img src="${p.img}" alt="${p.name}" class="product-img">
-              <img src="${p.img_hover}" alt="" class="product-img-hover">
-          </div>
-          <div class="product-content ">
-              <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">${p.name}</h3>
-              <div class="product-content-footer d-flex justify-content-around align-items-center">
-                  <div class="price">${p.price}đ</div>
-                  <div class="rating">
-                      <img src="./src/image/star.png" alt="" />
-                      <img src="./src/image/star.png" alt="" />
-                      <img src="./src/image/star.png" alt="" />
-                      <img src="./src/image/star.png" alt="" />
-                      <img src="./src/image/star.png" alt="" />
-                  </div>
-              </div>
-          </div>
-          </a>
-          <div class="add-cart"><i class="bi bi-cart-plus"></i></div>
-      </div>
-    `
-  ).join('')
- )
+//  $(".list-product").html( products.map(
+//     (p) => `
+//       <div class="col-md-3 col-6 position-relative">
+//         <a href="product-detail.html" class="home-product-item">
+//           <div class="thumbnails">
+//               <img src="${p.img}" alt="${p.name}" class="product-img">
+//               <img src="${p.img_hover}" alt="" class="product-img-hover">
+//           </div>
+//           <div class="product-content ">
+//               <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">${p.name}</h3>
+//               <div class="product-content-footer d-flex justify-content-around align-items-center">
+//                   <div class="price">${p.price}đ</div>
+//                   <div class="rating">
+//                       <img src="./src/image/star.png" alt="" />
+//                       <img src="./src/image/star.png" alt="" />
+//                       <img src="./src/image/star.png" alt="" />
+//                       <img src="./src/image/star.png" alt="" />
+//                       <img src="./src/image/star.png" alt="" />
+//                   </div>
+//               </div>
+//           </div>
+//           </a>
+//           <div class="add-cart"><i class="bi bi-cart-plus"></i></div>
+//       </div>
+//     `
+//   ).join('')
+//  )
 
-let add = document.querySelector('.add-cart')
-console.log(add);
-add.onclick =function(){
-  console.log('test');
-}
+// add to cart
+const addToCart = (event) => {
+  event.preventDefault();
+
+  const cart = JSON.parse(localStorage.getItem("carts")) || [];
+
+  const item = _.find(cart, { product: event.data.id });
+
+  if (item) {
+    item.quantity += 1;
+  } else {
+    cart.push({
+      product: event.data.id,
+      quantity: 1,
+    });
+  }
+
+  localStorage.setItem("carts", JSON.stringify(cart));
+  alert("Thêm thành công sản phẩm vào giỏ hàng");
+};
+
+// render product
+$(function () {
+  const productTemplate = $("#home-product").html();
+  const product = _.template(productTemplate); // compile
+
+  $(".list-product").append(
+    _.map(products, (pr) => {
+      const dom = $(product(pr));
+
+      dom.find(".add-cart").on("click", pr, addToCart);
+
+      return dom;
+    })
+  );
+});

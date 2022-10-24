@@ -64,6 +64,7 @@ const addToCart = (event) => {
 
   localStorage.setItem("carts", JSON.stringify(cart));
   alert("Thêm thành công sản phẩm vào giỏ hàng");
+  $(".amont-cart").text(cart.length)
 };
 
 // render product

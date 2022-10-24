@@ -14,47 +14,46 @@ import "../css/reponsive.css"
 
 
  
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("carts")) || []; 
 
-// const deleteItem = (event) => {
-//     if (confirm("Chắc chắn xóa không?")) {
-//         cart = _.filter(cart, (item) => item.product !== event.data.product.id);
+const deleteItem = (event) => {
+    if (confirm("Chắc chắn xóa không?")) {
+        cart = _.filter(cart, (item) => item.product !== event.data.product.id);
 
-//         localStorage.setItem("cart", JSON.stringify(cart));
+        localStorage.setItem("carts", JSON.stringify(cart));
 
-//         event.target.closest(".item").remove();
-//     }
-// };
+        event.target.closest(".item").remove();
+    }
+};
 
-// const increment = (event) => {
-//     const product = _.find(cart, { product: event.data.product.id });
+const increment = (event) => {
+    const product = _.find(cart, { product: event.data.product.id });
 
-//     product.quantity += 1;
-//     const item = $(event.target.closest(".item"));
-//     item.find(".quantity").text(product.quantity);
+    product.quantity += 1;
+    const item = $(event.target.closest(".item"));
+    item.find(".quantity").text(product.quantity);
 
-//     localStorage.setItem("cart", JSON.stringify(cart));
-// };
+    localStorage.setItem("carts", JSON.stringify(cart));
+};
 
-// const decrement = (event) => {
-//     const product = _.find(cart, { product: event.data.product.id });
+const decrement = (event) => {
+    const product = _.find(cart, { product: event.data.product.id });
 
-//     if (product.quantity === 1) return;
-//     else product.quantity -= 1;
+    if (product.quantity === 1) return;
+    else product.quantity -= 1;
 
-//     const item = $(event.target.closest(".item"));
-//     item.find(".quantity").text(product.quantity);
+    const item = $(event.target.closest(".item"));
+    item.find(".quantity").text(product.quantity);
 
-//     localStorage.setItem("cart", JSON.stringify(cart));
-// };
+    localStorage.setItem("carts", JSON.stringify(cart));
+};
 
 $(function () {
     const items = _.map(_.cloneDeep(cart), (item) => {
         item.product = _.find(products, { id: item.product });
-
+        console.log(item.product)
         return item;
     });
-    console.log("cart", item);
 
     $(".cart-list").prepend(
         _.map(items, (i) => {

@@ -15,55 +15,7 @@ import "../css/reponsive.css"
 import { products } from "./db";
 
 
-$('.multiple-items').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 3,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
 
-  let menuMobile=document.querySelector('.menu-mb .menu-mb-icon');
-  let headerNav=document.querySelector('.nav-mb');
- let menuClose=document.querySelector('.mb-close i');
- let overflow=document.querySelector('.over');
-
- 
- menuMobile.onclick = function(){
-  console.log('test');
-  headerNav.classList.add('open')
-  overflow.classList.add('open')
- }
- menuClose.onclick = function(){
-    headerNav.classList.remove('open');
-     overflow.classList.remove('open');
- }
  
 //  $(".list-product").html( products.map(
 //     (p) => `
@@ -118,23 +70,73 @@ const addToCart = (event) => {
 $(function () {
   const productTemplate = $("#product").html();
   const product = _.template(productTemplate); // compile
+  console.log("index");
 
   $(".list-product").append(
-    _.map(products, (pr) => {
-      const dom = $(product(pr));
+    _.map(products, (p) => {
+      const dom = $(product(p));
 
-      dom.find(".add-cart").on("click", pr, addToCart);
-
-      return dom;
-    })
-  );
-  $(".product").append(
-    _.map(products, (pr) => {
-      const dom = $(product(pr));
-
-      // dom.find(".add-cart").on("click", pr, addToCart);
+      dom.find(".add-cart").on("click", p, addToCart);
 
       return dom;
     })
   );
 });
+
+$(function () {
+  let cart = JSON.parse(localStorage.getItem("carts")) || [];
+
+  $(".amont-cart").text(cart.length);
+});
+
+
+
+$('.multiple-items').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 3,
+  autoplay: true,
+  autoplaySpeed: 1000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+let menuMobile=document.querySelector('.menu-mb .menu-mb-icon');
+let headerNav=document.querySelector('.nav-mb');
+let menuClose=document.querySelector('.mb-close i');
+let overflow=document.querySelector('.over');
+
+
+menuMobile.onclick = function(){
+console.log('test');
+headerNav.classList.add('open')
+overflow.classList.add('open')
+}
+menuClose.onclick = function(){
+  headerNav.classList.remove('open');
+   overflow.classList.remove('open');
+}

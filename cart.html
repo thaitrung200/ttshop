@@ -132,14 +132,10 @@
             </div>
         </div>
         <div class="carts">
-            <div class="container">
-                <!-- <h1 class="heading">
-                    <ion-icon name="cart-outline"></ion-icon> Giỏ hàng
-                </h1>               -->
+            <!-- <div class="container">
+               
                 <div class="d-flex f-direction-mb">            
-                    <!--
-                     - checkout section
-                    -->
+                   
                     <section class="checkout">
               
                       <h2 class="section-heading">Chi tiết thanh toán</h2>
@@ -192,26 +188,24 @@
                       </button>
               
                     </section>         
-                    <!--
-                      - cart section
-                    -->
+                    
                     <section class="cart">
               
                       <div class="cart-item-box">
               
                         <h2 class="section-heading">Sản phẩm</h2>
               
-                        <div class="product-card">
+                        <div class="product-card cart-list" >
               
-                          <div class="card">
+                          <div class="card" id="itemcar">
               
                             <div class="img-box">
-                              <img src="./src/image/green-tomatoes.jpg" alt="Green tomatoes" width="80px" class="product-img">
+                              <img src="${product.img}" alt="Green tomatoes" width="80px" class="product-img">
                             </div>
               
                             <div class="detail">
               
-                              <h4 class="product-name">Green Tomatoes 1 Kilo</h4>
+                              <h4 class="product-name">${product.name}</h4>
               
                               <div class="wrapper">
               
@@ -242,49 +236,6 @@
                           </div>
               
                         </div>
-              
-                        <div class="product-card">
-              
-                          <div class="card">
-              
-                            <div class="img-box">
-                              <img src="./src/image/green-tomatoes.jpg" alt="Cabbage" width="80px" class="product-img">
-                            </div>
-              
-                            <div class="detail">
-              
-                              <h4 class="product-name">Cabbage 1 Pcs</h4>
-              
-                              <div class="wrapper">
-              
-                                <div class="product-qty">
-                                  <button id="decrement">
-                                    <i class="bi bi-dash minus"></i>
-                                  </button>
-              
-                                  <span id="quantity">1</span>
-              
-                                  <button id="increment">
-                                    <i class="bi bi-plus plus"></i>
-                                  </button>
-                                </div>
-              
-                                <div class="price">
-                                  $ <span id="price">0.80</span>
-                                </div>
-              
-                              </div>
-              
-                            </div>
-              
-                            <button class="product-close-btn">
-                                <i class="bi bi-x"></i>
-                            </button>
-              
-                          </div>
-              
-                        </div>
-              
                       </div>
               
                       <div class="wrapper">
@@ -327,7 +278,74 @@
               
                     </section>             
                 </div>
-            </div>
+            </div> -->
+            <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      .
+                      <div class="table-responsive">
+                          <table class="table table-primary">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Hình ảnh sản phẩm</th>
+                                      <th scope="col">Tên sản phẩm</th>
+                                      <th scope="col">Số lượng</th>
+                                      <th scope="col">Action</th>
+                                  </tr>
+                              </thead>
+                              <tbody class="cart-list">
+                                  <template id="item">
+                                      <tr class="item">
+                                          <td scope="row">
+                                              <img
+                                                  style="width: 50px"
+                                                  src="${ product.img }"
+                                                  alt="${ product.name }"
+                                              />
+                                          </td>
+                                          <td>${ product.name }</td>
+                                          <td>
+                                              <div
+                                                  class="btn-group"
+                                                  role="group"
+                                                  aria-label="Basic example"
+                                              >
+                                                  <button
+                                                      type="button"
+                                                      class="btn btn-light btn-down"
+                                                  >
+                                                      -
+                                                  </button>
+                                                  <span class="btn quantity">
+                                                      ${ quantity }
+                                                  </span>
+                                                  <button
+                                                      type="button"
+                                                      class="btn btn-light btn-up"
+                                                  >
+                                                      +
+                                                  </button>
+                                              </div>
+                                          </td>
+                                          <td>
+                                              <button
+                                                  class="btn btn-danger btn-delete"
+                                              >
+                                                  Xóa
+                                              </button>
+                                          </td>
+                                      </tr>
+                                  </template>
+                                  <tr>
+                                      <td colspan="3">Tổng tiền</td>
+                                      <td class="total"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
         <div class="footer mt-4 pb-5 pt-5">
           <div class="container">
@@ -394,7 +412,7 @@
     </div>
 
 
-    <script type="text/html" src="./src/js/index.js"></script>
+    <script type="module" src="./src/js/"></script>
     <script type="module" src="./src/js/cart.js"></script>
 </body>
 </html>

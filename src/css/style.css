@@ -247,8 +247,8 @@ label {
 }
 .add-cart{
     position: absolute;
-    top: 16px;
-    right: 24px;
+    top: 4px;
+    right: 10px;
     z-index: 9;
     padding: 8px;
     cursor: pointer;

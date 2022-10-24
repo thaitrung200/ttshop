@@ -23,6 +23,7 @@ const deleteItem = (event) => {
         localStorage.setItem("carts", JSON.stringify(cart));
 
         event.target.closest(".item").remove();
+        $(".amont-cart").text(cart.length)
     }
 };
 

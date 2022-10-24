@@ -88,9 +88,10 @@
                                     
                             </div> <!-- /form -->
                         </div>
-                        <a href="cart.html">
-                            <i class="bi bi-bag menu-icon"></i>
-                        </a>
+                        <a href="cart.html" class="cart-menu">
+                          <i class="bi bi-bag menu-icon"></i>
+                          <span class="amont-cart">0</span>
+                      </a>
                         
                         
                     </div>
@@ -107,12 +108,12 @@
   
                   </div>
                   <div class="nav-mb">
-                      <li><a href="">Trang chủ</a></li>
-                      <li><a href="">Giới thiệu</a></li>
-                      <li><a href="">Sản phẩm</a></li>
-                      <li><a href="">Tin tức</a></li>
-                      <li><a href="">Liên hệ</a></li>
-                      <p class="mb-close"><i class="bi bi-x"></i></p>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Giới thiệu</a></li>
+                    <li><a href="product.html">Sản phẩm</a></li>
+                    <li><a href="blog.html">Tin tức</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <p class="mb-close"><i class="bi bi-x"></i></p>
                   </div>
                   <div class="logo-mb">
                       <img src="./src/image/logo1.jpg" alt="">
@@ -132,7 +133,7 @@
             </div>
         </div>
         <div class="carts">
-            <!-- <div class="container">
+            <div class="container">
                
                 <div class="d-flex f-direction-mb">            
                    
@@ -191,54 +192,42 @@
                     
                     <section class="cart">
               
-                      <div class="cart-item-box">
+                      <div class="cart-item-box"> 
               
                         <h2 class="section-heading">Sản phẩm</h2>
               
                         <div class="product-card cart-list" >
               
-                          <div class="card" id="itemcar">
-              
-                            <div class="img-box">
-                              <img src="${product.img}" alt="Green tomatoes" width="80px" class="product-img">
-                            </div>
-              
-                            <div class="detail">
-              
-                              <h4 class="product-name">${product.name}</h4>
-              
-                              <div class="wrapper">
-              
-                                <div class="product-qty">
-                                    <button id="decrement">
-                                        <i class="bi bi-dash minus"></i>
-                                      </button>
-                  
-                                      <span id="quantity">1</span>
-                  
-                                      <button id="increment">
-                                        <i class="bi bi-plus plus"></i>
-                                      </button>
-                                </div>
-              
+                          <template class="" id="item">
+                              <div class="card item">
+                                <div class="img-box">
+                                  <img src="${product.img}" alt="Green tomatoes" width="100px" class="product-img">
+                                </div>            
+                                <div class="detail">
+                                  <h4 class="product-name">${product.name}</h4>
+                                  <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-light btn-down">
+                                            -
+                                        </button>
+                                        <span class="btn quantity">
+                                            ${ quantity }
+                                        </span>
+                                        <button type="button" class="btn btn-light btn-up">
+                                            +
+                                        </button>
+                                  </div>
+                                </div>        
                                 <div class="price">
-                                  $ <span id="price">1.25</span>
+                                    <span id="price">${product.price}</span>đ
                                 </div>
-              
+                                <button class="btn btn-danger btn-delete">
+                                    Xóa
+                                </button>
                               </div>
+                          </template>
+                      </div> 
               
-                            </div>
-              
-                            <button class="product-close-btn">
-                                <i class="bi bi-x"></i>
-                            </button>
-              
-                          </div>
-              
-                        </div>
-                      </div>
-              
-                      <div class="wrapper">
+                       <div class="wrapper"> 
               
                         <div class="discount-token">
               
@@ -257,29 +246,30 @@
                         <div class="amount">
               
                           <div class="subtotal">
-                            <span>Tổng tiền hàng</span> <span>$ <span id="subtotal">2.05</span></span>
+                            <span>Tổng tiền hàng</span> <span><span id="subtotal">990.000</span> đ</span>
                           </div>
               
-                          <div class="tax">
+                          <!-- <div class="tax">
                             <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
-                          </div>
+                          </div> -->
               
                           <div class="shipping">
-                            <span>Shipping</span> <span>$ <span id="shipping">0.00</span></span>
+                            <span>Phí ship</span> <span><span id="shipping">0.00</span> đ</span>
                           </div>
               
                           <div class="total">
-                            <span>Tổng thanh toán</span> <span>$ <span id="total">2.15</span></span>
+                            <span>Tổng thanh toán</span> <span><span id="total">990.000</span> đ</span>
                           </div>
               
                         </div>
               
-                      </div>
+                      </div> 
               
                     </section>             
                 </div>
-            </div> -->
-            <div class="container">
+            </div>
+            
+            <!-- <div class="container">
               <div class="row">
                   <div class="col-12">
                       .
@@ -345,7 +335,7 @@
                       </div>
                   </div>
               </div>
-          </div>
+            </div> -->
         </div>
         <div class="footer mt-4 pb-5 pt-5">
           <div class="container">
@@ -411,6 +401,7 @@
       </div>
     </div>
 
+    <!-- <script type="module" src="src/js/index.js"></script> -->
     <script type="module" src="src/js/cart.js"></script>
     
 </body>

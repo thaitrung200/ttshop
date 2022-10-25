@@ -22,9 +22,34 @@ $(function () {
       return dom;
     })
   );
+
+  $(".filter-checkbox").append(
+    _.uniq(productHome.map(({ category }) => category)).map((c) => {
+        const categoryTemplate = $("#category-template").html();
+        const template = _.template(categoryTemplate);
+
+        const dom = $(template({ category: c }));
+
+        return dom;
+    })
+  );
+  $(".filter-trademark").append(
+    _.uniq(productHome.map(({ trademark }) => trademark)).map((t) => {
+        const trademarkTemplate = $("#trade-template").html();
+        const template = _.template(trademarkTemplate);
+
+        const dom = $(template({ trademark: t }));
+
+        return dom;
+    })
+  );
 });
 
+$(function () {
+  let cart = JSON.parse(localStorage.getItem("carts")) || [];
 
+  $(".amont-cart").text(cart.length);
+});
 
 
 

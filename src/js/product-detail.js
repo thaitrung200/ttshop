@@ -13,6 +13,8 @@ import "../css/reponsive.css"
 
 import { productHome } from "./db.js";
 
+
+
 $(function () {
   const url = new URL(location.href);
   const id = Number(url.searchParams.get("id"));

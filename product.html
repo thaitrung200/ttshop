@@ -90,7 +90,7 @@
                         </div>
                         <a href="cart.html" class="cart-menu">
                             <i class="bi bi-bag menu-icon"></i>
-                            <span >0</span>
+                            <span class="amont-cart">0</span>
                         </a>
                         
                         
@@ -122,7 +122,10 @@
     
                     <div class="user-mb">
                         <i class="bi bi-person"></i>
-                        <i class="bi bi-bag"></i>
+                        <a href="cart.html" class="cart-menu">
+                            <i class="bi bi-bag menu-icon"></i>
+                            <span class="amont-cart">0</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -152,17 +155,22 @@
                 <div class="row mt-md-4 ">
                     <div class="col-md-3 d-none-mb">
                         <h2 class="filter-title">Danh mục sản phẩm</h2>
-                        <div class="filter-checkbox " >
-                            <label for="" class="d-flex align-items-center">
-                                <input type="checkbox"> <span>Giày nam</span>
-                            </label>
-                            <label for="" class="d-flex align-items-center">
-                                <input type="checkbox"> <span>Giày nữ</span>
-                            </label>
-                            <label for="" class="d-flex align-items-center">
-                                <input type="checkbox"> <span>Giày nữ Adidas</span>
-                            </label>
+                        <div class="filter-checkbox" >
+                            <!-- <div class="d-flex align-items-center form-check">
+                                <input type="checkbox" name="" value=""> 
+                                <label>Giày nam</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox"> 
+                                <label>Giày nữ</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox"> 
+                                <label>Giày nữ Adidas</label>
+                            </div> -->
                         </div>
+                        <h2 class="filter-title mt-3">Thương hiệu</h2>
+                        <div class="filter-trademark"></div>
                     </div>
                     <div class="col-md-9 col-12">
                         <div class="row product">
@@ -423,16 +431,29 @@
         </div>
     </div>
 
+
+    <script type="text/html" id="category-template">
+        <div class="d-flex align-items-center form-check">
+            <input type="checkbox" name="" value=">${category}"> 
+            <label>${category}</label>
+        </div>
+    </script>
+    <script type="text/html" id="trade-template">
+        <div class="d-flex align-items-center form-check">
+            <input type="checkbox" name="" value=">${trademark}"> 
+            <label>${trademark}</label>
+        </div>
+    </script>
     <script type="text/html" id="product-home">
-        <div class="col-md-3 col-6">
+        <div class="col-md-4 col-lg-3 col-6">
             <a href="product-detail.html?id=${ id }" class="home-product-item product-item">
                 <div class="thumbnails">
                     <img src="${img}" alt="" class="product-img">
                 </div>
                 <div class="product-content ">
-                    <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">Giày Lacoste L001 321 Nam</h3>
+                    <h3 class="product-content-title text-center mt-2 mb-1 fw-bold">${name}</h3>
                     <div class="product-content-footer d-flex justify-content-around align-items-center">
-                        <div class="price">1.350.000đ</div>
+                        <div class="price">${price} đ</div>
                         <div class="rating">
                             <img src="./src/image/star.png" alt="" />
                             <img src="./src/image/star.png" alt="" />

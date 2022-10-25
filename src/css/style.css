@@ -300,20 +300,35 @@ label {
 .filter-title{
     font-size: 24px;
     font-weight: 600;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     margin-right: 38px;
     /* margin: 0 12px 12px 0; */
     border-bottom: 1px solid #ccc;
 }
 .filter-checkbox label{
     width: 100%;
-    padding-top: 12px;
+    /* padding-top: 12px; */
+}
+.filter-checkbox{
+    margin-top: 8px;
+}
+.filter-trademark{
+    margin-top: 8px;
+}
+.filter-checkbox .form-check{
+    padding: 4px 0;
+}
+.filter-trademark .form-check{
+    padding: 4px 0;
 }
 .filter-checkbox input{
     font-size: 16px;
 }
-.filter-checkbox span{
-    margin-left: 16px;
+.filter-checkbox .form-check input{
+    margin-right: 8px;
+}
+.filter-trademark .form-check input{
+    margin-right: 8px;
 }
 .product-content-footer{
     

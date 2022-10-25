@@ -12,7 +12,12 @@ let headerNav=document.querySelector('.nav-mb');
 let menuClose=document.querySelector('.mb-close i');
 let overflow=document.querySelector('.over');
 
- 
+$(function () {
+  let cart = JSON.parse(localStorage.getItem("carts")) || [];
+  console.log(cart);
+  $(".amont-cart").text(cart.length);
+});
+
 menuMobile.onclick = function(){
   console.log('test');
   headerNav.classList.add('open')

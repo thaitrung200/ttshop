@@ -7,6 +7,16 @@ import $ from "jquery"
 import "../css/style.css"
 import "../css/reponsive.css"
 
+
+$(function () {
+  let cart = JSON.parse(localStorage.getItem("carts")) || [];
+  console.log("about");
+  console.log(cart);
+  $(".amont-cart").text(cart.length);
+});
+
+
+
 let menuMobile=document.querySelector('.menu-mb .menu-mb-icon');
 let headerNav=document.querySelector('.nav-mb');
 let menuClose=document.querySelector('.mb-close i');
@@ -14,7 +24,6 @@ let overflow=document.querySelector('.over');
 
  
 menuMobile.onclick = function(){
-  console.log('test');
   headerNav.classList.add('open')
   overflow.classList.add('open')
  }

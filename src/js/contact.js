@@ -13,6 +13,14 @@ let menuClose=document.querySelector('.mb-close i');
 let overflow=document.querySelector('.over');
 
  
+$(function () {
+  let cart = JSON.parse(localStorage.getItem("carts")) || [];
+
+  $(".amont-cart").text(cart.length);
+});
+
+
+
 menuMobile.onclick = function(){
   console.log('test');
   headerNav.classList.add('open')

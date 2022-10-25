@@ -23,6 +23,13 @@
     .form-info input,textarea{
         width: 100%;
     }
+    .product-content-footer .price{
+        width: 50%;
+        font-size: 14px;
+    }
+    .rating img{
+        width: 15%;
+    }
 }
 /* Mobile */
 @media(max-width:739px){

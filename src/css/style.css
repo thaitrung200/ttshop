@@ -245,6 +245,18 @@ label {
     margin-top: 16px;
     position: relative;
 }
+.product-item{
+    margin-bottom: 0px;
+}
+.product-item .thumbnails {
+    overflow: hidden;
+}
+.product-item .thumbnails img{
+    transition: 0.4s;
+}
+.product-item .thumbnails:hover img{
+    transform: scale(1.1);
+}
 .add-cart{
     position: absolute;
     top: 4px;
@@ -488,10 +500,12 @@ label {
     font-weight: 700;
     margin-right: 12px;
 }
-.product-item{
+/* .product-item{
     margin-bottom: 24px;
+} */
+.product-detail-img{
+    width: 380px;
 }
-
 .product-detail-img img{
     width: 100%;
 }
@@ -499,6 +513,7 @@ label {
     font-size: 24px;
     font-weight: 700;
 }
+
 .form-size label{
     width: 50px;
 }

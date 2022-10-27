@@ -519,7 +519,7 @@ label {
     margin-bottom: 24px;
 } */
 .product-detail-img{
-    width: 380px;
+    /* width: 380px; */
 }
 .product-detail-img img{
     width: 100%;

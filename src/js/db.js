@@ -141,7 +141,7 @@ export const productHome =[
   {
     id: 18,
     img: "https://myshoes.vn/image/cache/catalog/2022/adidas/13.9/giay-adidas-galaxy-6-nu-trang-xanh-01-250x250.jpg",
-    name:"Giày Nike Quest 4 Nam- Đen Xanh",
+    name:"Giày Adidas Quest 4 Nam- Đen Xanh",
     price: 600000,
     category: "Giày Nữ",
     trademark: "Adidas",

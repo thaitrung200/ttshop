@@ -30,6 +30,9 @@
     .rating img{
         width: 15%;
     }
+    h4.product-name {
+        font-size: 12px;
+    }
 }
 /* Mobile */
 @media(max-width:739px){

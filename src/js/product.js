@@ -9,19 +9,47 @@ import {productHome} from "./db.js"
 import "../css/style.css"
 import "../css/reponsive.css"
 
-
-$(function () {
+const render = (productHome) => {
+  const $productList = $(".product")
   const productTemplate = $("#product-home").html();
   const product = _.template(productTemplate); // compile
-  console.log("index");
 
-  $(".product").append(
+  $productList.html("")
+  $productList.append(
     _.map(productHome, (p) => {
       const dom = $(product(p));
-      // dom.find(".add-cart").on("click", p, addToCart);
+
       return dom;
     })
   );
+}
+
+const filterCate = (e) =>{
+  const categories = [];
+  $("input:checked").each(function () {
+    categories.push(this.value);
+  });
+  console.log(categories);
+  const filterProducts = productHome.filter(
+    (p) => categories.length === 0 || categories.includes(p.category)
+  )
+  render(filterProducts)
+}
+
+const filterBrand = (e) =>{
+  const categories = [];
+  $("input:checked").each(function () {
+    categories.push(this.value);
+  });
+  console.log(categories);
+  const filterBrands = productHome.filter(
+    (p) => categories.length === 0 || categories.includes(p.trademark) 
+  )
+  render(filterBrands)
+}
+
+$(function () {
+  render(productHome);
 
   $(".filter-checkbox").append(
     _.uniq(productHome.map(({ category }) => category)).map((c) => {
@@ -33,6 +61,8 @@ $(function () {
         return dom;
     })
   );
+  $("form.filter-sex").on("change", filterCate)
+
   $(".filter-trademark").append(
     _.uniq(productHome.map(({ trademark }) => trademark)).map((t) => {
         const trademarkTemplate = $("#trade-template").html();
@@ -43,6 +73,7 @@ $(function () {
         return dom;
     })
   );
+  $("form.filter-brand").on("change", filterBrand)
 });
 
 $(function () {

@@ -155,22 +155,26 @@
                 <div class="row mt-md-4 ">
                     <div class="col-md-3 d-none-mb">
                         <h2 class="filter-title">Danh mục sản phẩm</h2>
-                        <div class="filter-checkbox" >
-                            <!-- <div class="d-flex align-items-center form-check">
-                                <input type="checkbox" name="" value=""> 
-                                <label>Giày nam</label>
+                        <form action="" class="filter-sex">
+                            <div class="filter-checkbox" >
+                                <!-- <div class="d-flex align-items-center form-check">
+                                    <input type="checkbox" name="" value=""> 
+                                    <label>Giày nam</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox"> 
+                                    <label>Giày nữ</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox"> 
+                                    <label>Giày nữ Adidas</label>
+                                </div> -->
                             </div>
-                            <div class="d-flex align-items-center">
-                                <input type="checkbox"> 
-                                <label>Giày nữ</label>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <input type="checkbox"> 
-                                <label>Giày nữ Adidas</label>
-                            </div> -->
-                        </div>
+                        </form>
                         <h2 class="filter-title mt-3">Thương hiệu</h2>
-                        <div class="filter-trademark"></div>
+                        <form action="" class="filter-brand">
+                            <div class="filter-trademark"></div>
+                        </form>
                     </div>
                     <div class="col-md-9 col-12">
                         <div class="row product">
@@ -434,13 +438,13 @@
 
     <script type="text/html" id="category-template">
         <div class="d-flex align-items-center form-check">
-            <input type="checkbox" name="" value=">${category}"> 
+            <input type="checkbox" name="category" value="${category}"> 
             <label>${category}</label>
         </div>
     </script>
     <script type="text/html" id="trade-template">
         <div class="d-flex align-items-center form-check">
-            <input type="checkbox" name="" value=">${trademark}"> 
+            <input type="checkbox" name="" value="${trademark}"> 
             <label>${trademark}</label>
         </div>
     </script>

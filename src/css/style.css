@@ -288,7 +288,7 @@ label {
     display: none;
 
 }
-.thumbnails:hover .product-img-hover{
+.home-product-item .thumbnails:hover .product-img-hover{
     display: block;
 }
 .product-content{

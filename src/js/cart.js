@@ -5,7 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import $ from "jquery"
 import _ from "lodash";
 import "./index.js"
-import { products } from "./db";
+import { products, productHome } from "./db";
 
 import "../css/style.css"
 import "../css/reponsive.css"
@@ -16,6 +16,8 @@ import "../css/reponsive.css"
  
 let cart = JSON.parse(localStorage.getItem("carts")) || []; 
 
+
+
 const deleteItem = (event) => {
     if (confirm("Chắc chắn xóa không?")) {
         cart = _.filter(cart, (item) => item.product !== event.data.product.id);
@@ -23,7 +25,8 @@ const deleteItem = (event) => {
         localStorage.setItem("carts", JSON.stringify(cart));
 
         event.target.closest(".item").remove();
-        $(".amont-cart").text(cart.length)
+        $(".amont-cart").text(cart.length);
+        totals();
     }
 };
 
@@ -41,7 +44,7 @@ const increment = (event) => {
    console.log("tổng",product.total);
 
     localStorage.setItem("carts", JSON.stringify(cart));
-    total()
+    totals();
 };
 
 const decrement = (event) => {
@@ -57,12 +60,13 @@ const decrement = (event) => {
     console.log("tổng",product.total);
 
     localStorage.setItem("carts", JSON.stringify(cart));
-    total()
+    totals();
 };
 
 $(function () {
+
     const items = _.map(_.cloneDeep(cart), (item) => {
-        item.product = _.find(products, { id: item.product });
+        item.product = _.find(products, { id: item.product }) ||  _.find(productHome, { id: item.product });
         console.log(item.product)
         return item;
     });
@@ -79,22 +83,23 @@ $(function () {
             
             return dom;
         })
-    );
-
-    total()
+        );
+    totals();
 });
 
-const total = () => {
+const totals = () => {
+    let cart = JSON.parse(localStorage.getItem("carts")) || []; 
     let sum = 0;
     for (let i = 0; i < cart.length; i++) {
         sum += Number(cart[i].total);
-        console.log(cart[i]);
-        console.log(cart[i].total);
+        console.log('1',cart[i]);
+        console.log('2',cart[i].total);
     }
     $("#subtotal").text(sum.toFixed(0));
     $("#total").text(sum.toFixed(0));
   };
-  
+console.log('hello',totals());
+
 // $(function(){
 //   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 //   if(cart.length === 0){

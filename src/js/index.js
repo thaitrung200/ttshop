@@ -59,12 +59,17 @@ const addToCart = (event) => {
     cart.push({
       product: event.data.id,
       quantity: 1,
+      price: event.data.price,
     });
   }
-
+  
+  for (let i = 0; i < cart.length; i++){
+    cart[i].total = cart[i].price * cart[i].quantity;
+  }
   localStorage.setItem("carts", JSON.stringify(cart));
   alert("Thêm thành công sản phẩm vào giỏ hàng");
   $(".amont-cart").text(cart.length)
+ 
 };
 
 // render product

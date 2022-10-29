@@ -252,6 +252,7 @@ label {
     overflow: hidden;
 }
 .product-item .thumbnails img{
+    max-width: 100%;
     transition: 0.4s;
 }
 .product-item .thumbnails:hover img{

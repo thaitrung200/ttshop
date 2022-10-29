@@ -292,6 +292,9 @@ label {
 .home-product-item .thumbnails:hover .product-img-hover{
     display: block;
 }
+.home-product-item .thumbnails img{
+    max-width: 100%;
+}
 .product-content{
     padding: 8px 0 12px 0;
 }

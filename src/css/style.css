@@ -307,6 +307,9 @@ a.home-product-item{
 .rating i{
     color: #F8B704;
 }
+.slider-item-text{
+    padding: 0 8px;
+}
 .filter-title{
     font-size: 24px;
     font-weight: 600;

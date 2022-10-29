@@ -297,6 +297,9 @@ label {
 .product-content-title{
     font-size: 14px;
 }
+.rating i{
+    color: #F8B704;
+}
 .filter-title{
     font-size: 24px;
     font-weight: 600;

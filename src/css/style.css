@@ -289,6 +289,9 @@ label {
     display: none;
 
 }
+a.home-product-item{
+    width: 100%;
+}
 .home-product-item .thumbnails:hover .product-img-hover{
     display: block;
 }
